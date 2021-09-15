@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/registarionFragment"
+        android:name="com.example.firebase.RegistarionFragment"
+        android:label="fragment_registarion"
+        tools:layout="@layout/fragment_registarion" >
+        <action
+            android:id="@+id/action_registarionFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/registarionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.firebase.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_registarionFragment"
+            app:destination="@id/registarionFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_googleSiginFragment"
+            app:destination="@id/googleSiginFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_saveDataFragment"
+            app:destination="@id/saveDataFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_uploadFileFragment"
+            app:destination="@id/uploadFileFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_uploadFileFragment2"
+            app:destination="@id/uploadFileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleSiginFragment"
+        android:name="com.example.firebase.GoogleSiginFragment"
+        android:label="fragment_google_sigin"
+        tools:layout="@layout/fragment_google_sigin" >
+        <action
+            android:id="@+id/action_googleSiginFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/googleSiginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveDataFragment"
+        android:name="com.example.firebase.SaveDataFragment"
+        android:label="fragment_save_data"
+        tools:layout="@layout/fragment_save_data" >
+        <action
+            android:id="@+id/action_saveDataFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/saveDataFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFileFragment"
+        android:name="com.example.firebase.UploadFileFragment"
+        android:label="fragment_upload_file"
+        tools:layout="@layout/fragment_upload_file" >
+        <action
+            android:id="@+id/action_uploadFileFragment_to_firstFragment"
+            app:destination="@id/firstFragment"
+            app:popUpTo="@id/uploadFileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
